@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.NikolaichukVS.Sprint2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.NikolaichukVS.Sprint2.Task0.V2.Test", "Tyuiu.NikolaichukVS.Sprint2.Task0.V2.Test\Tyuiu.NikolaichukVS.Sprint2.Task0.V2.Test.csproj", "{1B1A609C-02D9-456D-A252-7AF7519BF7FE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Task0", "Task0", "{2474B753-7FF2-4AFC-B93D-29B4F446C792}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E0BF8A46-0BAB-4D9C-97E7-4FC7655E56F8} = {2474B753-7FF2-4AFC-B93D-29B4F446C792}
+		{D9757233-303F-474A-9A45-FA3986B40040} = {2474B753-7FF2-4AFC-B93D-29B4F446C792}
+		{1B1A609C-02D9-456D-A252-7AF7519BF7FE} = {2474B753-7FF2-4AFC-B93D-29B4F446C792}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52BBD579-C817-422C-9758-ABB81A72AB82}
