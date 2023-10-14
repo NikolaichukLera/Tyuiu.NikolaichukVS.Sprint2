@@ -24,27 +24,26 @@ namespace Tyuiu.NikolaichukVS.Sprint2.Task6.V14
             Console.WriteLine("* Выполнила: Николайчук Валерия Сергеевна | РПСБ-23-1                     *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
-            Console.WriteLine("* Составить программу, которая в зависимости от порядкового номера дня    *");
-            Console.WriteLine("* недели выводит на экран его название.                                   *");
+            Console.WriteLine("* Определить, каким днем недели является k-й день не високосного года,    *");
+            Console.WriteLine("* в котором 1 января d-й день недели.                                     *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
 
 
-            Console.WriteLine("Введите значение переменной K =  ");
-            int numDay = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите номер дня в году: ");
+            int numDayinYear = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine("Введите номер дня недели: ");
+            int numDayOfWeek = Convert.ToInt32(Console.ReadLine());
+
+
 
             string res;
 
-            if ((numDay < 1) || (numDay > 7))
-            {
-                res = "Введите неверное значение!";
-            }
-            else
-            {
-                res = "Это день недели: " + ds.FindDayName(numDay);
-            }
+            res = "Днём недели является " + ds.FindDayName(numDayinYear, numDayOfWeek);
 
 
             Console.WriteLine("***************************************************************************");
@@ -54,7 +53,7 @@ namespace Tyuiu.NikolaichukVS.Sprint2.Task6.V14
             Console.WriteLine(res);
 
             Console.ReadLine();
+
         }
-    }
     }
 }

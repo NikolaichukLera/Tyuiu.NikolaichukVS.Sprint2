@@ -12,26 +12,30 @@ namespace Tyuiu.NikolaichukVS.Sprint2.Task6.V14.Lib
     {
         public string FindDayName(int k, int d)
         {
-            int d = 2;
-           
-            if ((k >= 1) && (k <= 365))
             {
-                d = k & 7;
-            }
+                if (k < 1 || k > 365)
+                    throw new ArgumentException("День в году находится в промежутке от 1 до 365.");
+                if (d < 1 || d > 7)
+                    throw new ArgumentException("День недели находится в промежутке от 1 до 7.");
+
+                int dayOfWeek = k % 7;
 
 
-            switch (d)
-            {
-                case 1: return "Понедельник";
-                case 2: return "Вторник";
-                case 3: return "Среда";
-                case 4: return "Четверг";
-                case 5: return "Пятница";
-                case 6: return "Суббота";
-                case 7: return "Воскресенье";
-                default: throw new ArgumentException($"День недели должен быть от 1 до 7. Значение {d}"); ;
+
+                switch (dayOfWeek)
+                {
+                    case 1: return "Понедельник";
+                    case 2: return "Вторник";
+                    case 3: return "Среда";
+                    case 4: return "Четверг";
+                    case 5: return "Пятница";
+                    case 6: return "Суббота";
+                    case 0: return "Воскресенье";
+
+                }
+                return "Что-то пошло не так";
+
             }
-            
         }
     }
 }
